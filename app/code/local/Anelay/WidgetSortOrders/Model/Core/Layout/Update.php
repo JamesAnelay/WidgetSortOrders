@@ -19,7 +19,7 @@
 //        foreach ($this->getHandles() as $handle) {
 //            $this->merge($handle);
 //        }
-        $this->mergeWithAllHandles();
+        $this->mergeWithAllActiveHandles();
 
         $this->saveCache();
         return $this;
