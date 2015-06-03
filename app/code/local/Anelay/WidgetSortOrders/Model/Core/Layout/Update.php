@@ -19,13 +19,13 @@
 //        foreach ($this->getHandles() as $handle) {
 //            $this->merge($handle);
 //        }
-        $this->applyDatabaseUpdates();
+        $this->mergeWithAllHandles();
 
         $this->saveCache();
         return $this;
     }
 
-    public function applyDatabaseUpdates()
+    public function mergeWithAllHandles()
     {
         $handles = $this->getHandles();
 
