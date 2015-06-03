@@ -1,6 +1,6 @@
 <?php class Anelay_WidgetSortOrders_Model_Resource_Core_Layout extends Mage_Core_Model_Resource_Layout
 {
-    public function fetchUpdatesByHandles($handles, $params = array())
+    public function fetchUpdatesByAllHandles($handles, $params = array())
     {
         $bind = array(
             'store_id'  => Mage::app()->getStore()->getId(),

@@ -56,7 +56,7 @@
 
     protected function _getUpdateStringForAllHandles($handles)
     {
-        return Mage::getResourceModel('anelay_widgetsortorders/core_layout')->fetchUpdatesByHandles($handles);
+        return Mage::getResourceModel('anelay_widgetsortorders/core_layout')->fetchUpdatesByAllHandles($handles);
     }
 
 
