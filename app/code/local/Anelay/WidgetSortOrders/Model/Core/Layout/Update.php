@@ -25,7 +25,7 @@
         return $this;
     }
 
-    public function mergeWithAllHandles()
+    public function mergeWithAllActiveHandles()
     {
         $handles = $this->getHandles();
 
@@ -40,7 +40,7 @@
     {
         $_profilerKey = 'layout/db_update_all_active_handles';
         Varien_Profiler::start($_profilerKey);
-        $updateStr = $this->_getUpdateStringForAllHandles($handles);
+        $updateStr = $this->_getUpdateStringForHandles($handles);
         if (!$updateStr) {
             return false;
         }
@@ -54,9 +54,9 @@
         return true;
     }
 
-    protected function _getUpdateStringForAllHandles($handles)
+    protected function _getUpdateStringForHandles($handles)
     {
-        return Mage::getResourceModel('anelay_widgetsortorders/core_layout')->fetchUpdatesByAllHandles($handles);
+        return Mage::getResourceModel('anelay_widgetsortorders/core_layout')->fetchUpdatesByMultipleHandles($handles);
     }
 
 
