@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Anelay_WidgetSortOrders>
+            <version>0.1.0</version>
+        </Anelay_WidgetSortOrders>
+    </modules>
+
+    <global>
+        <models>
+            <anelay_widgetsortorders>
+                <class>Anelay_WidgetSortOrders_Model</class>
+                <resourceModel>anelay_widgetsortorders_resource</resourceModel>
+            </anelay_widgetsortorders>
+
+            <anelay_widgetsortorders_resource>
+                <class>Anelay_WidgetSortOrders_Model_Resource</class>
+            </anelay_widgetsortorders_resource>
+
+            <core>
+                <rewrite>
+                    <layout_update>Anelay_WidgetSortOrders_Model_Core_Layout_Update</layout_update>
+                </rewrite>
+            </core>
+        </models>
+    </global>
+</config>
